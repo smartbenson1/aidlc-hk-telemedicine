@@ -1,0 +1,490 @@
+openapi: 3.0.0
+info:
+  title: Appointment Matching Service API
+  description: REST API for the Appointment Matching Service
+  version: 1.0.0
+  contact:
+    name: AIDLC Team
+    email: support@aidlc.com
+
+servers:
+  - url: https://api.example.com/prod
+    description: Production server
+
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Returns the health status of the service
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                        example: "healthy"
+                      service:
+                        type: string
+                        example: "appointment-matching-service"
+                      timestamp:
+                        type: string
+                        format: date-time
+                      version:
+                        type: string
+                        example: "1.0.0"
+
+  /symptoms:
+    post:
+      summary: Describe symptoms
+      description: Submit patient symptoms for analysis (US-P003)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - patient_id
+                - symptoms_text
+              properties:
+                patient_id:
+                  type: string
+                  description: Unique identifier for the patient
+                symptoms_text:
+                  type: string
+                  maxLength: 2000
+                  description: Free text description of symptoms
+      responses:
+        '200':
+          description: Symptoms analyzed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SymptomDescriptionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /symptoms/{symptom_id}:
+    get:
+      summary: Get symptom description
+      description: Retrieve a specific symptom description
+      parameters:
+        - name: symptom_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Symptom description found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SymptomDescriptionResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /recommendations:
+    post:
+      summary: Get doctor recommendations
+      description: Get recommended doctors based on symptom analysis (US-P004)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - symptom_description_id
+              properties:
+                symptom_description_id:
+                  type: string
+                  description: ID of the symptom description
+      responses:
+        '200':
+          description: Doctor recommendations generated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DoctorRecommendationResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /appointments:
+    post:
+      summary: Book appointment
+      description: Book an appointment with a selected doctor (US-P006)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - patient_id
+                - doctor_id
+                - appointment_datetime
+                - symptoms
+              properties:
+                patient_id:
+                  type: string
+                doctor_id:
+                  type: string
+                appointment_datetime:
+                  type: string
+                  format: date-time
+                symptoms:
+                  type: string
+                  maxLength: 2000
+                appointment_type:
+                  type: string
+                  enum: [in_person, telemedicine]
+                  default: in_person
+      responses:
+        '200':
+          description: Appointment booked successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppointmentResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '422':
+          $ref: '#/components/responses/BusinessRuleError'
+
+    get:
+      summary: List appointments
+      description: Get appointments for a patient or doctor
+      parameters:
+        - name: patient_id
+          in: query
+          schema:
+            type: string
+          description: Patient ID to filter appointments
+        - name: doctor_id
+          in: query
+          schema:
+            type: string
+          description: Doctor ID to filter appointments
+      responses:
+        '200':
+          description: Appointments retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppointmentListResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /appointments/{appointment_id}/reschedule:
+    post:
+      summary: Reschedule appointment
+      description: Reschedule an existing appointment (US-P008)
+      parameters:
+        - name: appointment_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - new_datetime
+                - reason
+              properties:
+                new_datetime:
+                  type: string
+                  format: date-time
+                reason:
+                  type: string
+                  maxLength: 500
+      responses:
+        '200':
+          description: Appointment rescheduled successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppointmentResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/BusinessRuleError'
+
+  /patients/{patient_id}/appointments:
+    get:
+      summary: Get patient appointments
+      description: Get all appointments for a specific patient (US-P007)
+      parameters:
+        - name: patient_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Patient appointments retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppointmentListResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /doctors/{doctor_id}/appointments:
+    get:
+      summary: Get doctor appointments
+      description: Get all appointments for a specific doctor (US-D005)
+      parameters:
+        - name: doctor_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Doctor appointments retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppointmentListResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+components:
+  schemas:
+    SymptomDescriptionResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            patient_id:
+              type: string
+            symptoms_text:
+              type: string
+            parsed_keywords:
+              type: array
+              items:
+                type: string
+            confidence_score:
+              type: number
+              format: float
+            matched_specialties:
+              type: array
+              items:
+                type: string
+            analysis_timestamp:
+              type: string
+              format: date-time
+            created_at:
+              type: string
+              format: date-time
+        timestamp:
+          type: string
+          format: date-time
+
+    DoctorRecommendationResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            symptom_description_id:
+              type: string
+            patient_id:
+              type: string
+            recommended_doctors:
+              type: array
+              items:
+                type: string
+            match_scores:
+              type: array
+              items:
+                type: number
+                format: float
+            available_slots:
+              type: array
+              items:
+                type: string
+                format: date-time
+            algorithm_version:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+        timestamp:
+          type: string
+          format: date-time
+
+    AppointmentResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            patient_id:
+              type: string
+            doctor_id:
+              type: string
+            datetime:
+              type: string
+              format: date-time
+            appointment_type:
+              type: string
+              enum: [in_person, telemedicine]
+            symptoms:
+              type: string
+            status:
+              type: string
+              enum: [scheduled, completed, cancelled, rescheduled, no_show]
+            reschedule_count:
+              type: integer
+            reschedule_reason:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+        timestamp:
+          type: string
+          format: date-time
+
+    AppointmentListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            appointments:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  patient_id:
+                    type: string
+                  doctor_id:
+                    type: string
+                  datetime:
+                    type: string
+                    format: date-time
+                  appointment_type:
+                    type: string
+                  symptoms:
+                    type: string
+                  status:
+                    type: string
+                  reschedule_count:
+                    type: integer
+                  reschedule_reason:
+                    type: string
+                  created_at:
+                    type: string
+                    format: date-time
+        timestamp:
+          type: string
+          format: date-time
+
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        timestamp:
+          type: string
+          format: date-time
+
+  responses:
+    BadRequest:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            error:
+              code: 400
+              message: "Invalid request parameters"
+            timestamp: "2023-12-01T10:00:00Z"
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            error:
+              code: 404
+              message: "Resource not found"
+            timestamp: "2023-12-01T10:00:00Z"
+
+    BusinessRuleError:
+      description: Business rule violation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            error:
+              code: 422
+              message: "Business rule violation"
+            timestamp: "2023-12-01T10:00:00Z"
+
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            success: false
+            error:
+              code: 500
+              message: "Internal server error"
+            timestamp: "2023-12-01T10:00:00Z"

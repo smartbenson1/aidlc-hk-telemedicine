@@ -1,0 +1,20 @@
+{
+  "7c197387-2ac1-490b-a360-284ae7b7d568": {
+    "id": "7c197387-2ac1-490b-a360-284ae7b7d568",
+    "name": "Dr Sarah Johnson",
+    "email": "sarah.johnson@medicenter.com",
+    "phone": "(555) 123-4568",
+    "location": "123 Medical Plaza, Suite 200, New York, NY 10001",
+    "specialties": [
+      "eca809bc-e727-48bb-abb7-bedfc36433ae",
+      "251abbbe-cd7c-43fc-8fea-c591160c1dac"
+    ],
+    "experience": "16 years of experience in cardiology and internal medicine. Recently completed advanced cardiac imaging certification.",
+    "rating": 0.0,
+    "status": "active",
+    "created_at": "2025-08-03T13:22:39.937688",
+    "updated_at": "2025-08-03T13:22:39.943970",
+    "created_by": null,
+    "updated_by": null
+  }
+}

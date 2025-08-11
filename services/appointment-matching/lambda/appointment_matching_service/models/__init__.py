@@ -1,0 +1,1 @@
+"""Domain model classes for the Appointment Matching Service."""

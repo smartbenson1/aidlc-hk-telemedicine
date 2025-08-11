@@ -1,0 +1,14 @@
+{
+  "name": "healmatch-easy",
+  "version": "1.0.0",
+  "description": "Medical appointment matching platform",
+  "architecture": "microservices",
+  "services": [
+    "user-management",
+    "appointment-matching",
+    "notification",
+    "administration"
+  ],
+  "frontend": "react-typescript",
+  "infrastructure": "aws-cdk"
+}

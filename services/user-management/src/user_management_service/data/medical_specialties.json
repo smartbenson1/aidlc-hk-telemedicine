@@ -1,0 +1,452 @@
+{
+  "eca809bc-e727-48bb-abb7-bedfc36433ae": {
+    "id": "eca809bc-e727-48bb-abb7-bedfc36433ae",
+    "name": "Cardiology",
+    "description": "Heart and cardiovascular system",
+    "status": "active",
+    "created_at": "2025-08-03T13:22:39.934714",
+    "updated_at": "2025-08-03T13:22:39.935309",
+    "created_by": null,
+    "updated_by": null
+  },
+  "251abbbe-cd7c-43fc-8fea-c591160c1dac": {
+    "id": "251abbbe-cd7c-43fc-8fea-c591160c1dac",
+    "name": "Dermatology",
+    "description": "Skin, hair, and nails",
+    "status": "active",
+    "created_at": "2025-08-03T13:22:39.935319",
+    "updated_at": "2025-08-03T13:22:39.935320",
+    "created_by": null,
+    "updated_by": null
+  },
+  "ddb33299-d554-4088-b5bd-b1d9c97ab4e5": {
+    "id": "ddb33299-d554-4088-b5bd-b1d9c97ab4e5",
+    "name": "Pediatrics",
+    "description": "Medical care of infants, children, and adolescents",
+    "status": "active",
+    "created_at": "2025-08-03T13:22:39.935325",
+    "updated_at": "2025-08-03T13:22:39.935325",
+    "created_by": null,
+    "updated_by": null
+  },
+  "e40ff434-546b-4d4a-8a1f-1fe6839dc45f": {
+    "id": "e40ff434-546b-4d4a-8a1f-1fe6839dc45f",
+    "name": "Orthopedics",
+    "description": "Musculoskeletal system",
+    "status": "active",
+    "created_at": "2025-08-03T13:22:39.935329",
+    "updated_at": "2025-08-03T13:22:39.935330",
+    "created_by": null,
+    "updated_by": null
+  },
+  "3c957d10-9e62-48da-8cf7-ef74ed452988": {
+    "id": "3c957d10-9e62-48da-8cf7-ef74ed452988",
+    "name": "Neurology",
+    "description": "Nervous system disorders",
+    "status": "active",
+    "created_at": "2025-08-03T13:22:39.935333",
+    "updated_at": "2025-08-03T13:22:39.935334",
+    "created_by": null,
+    "updated_by": null
+  },
+  "84fee9e6-5e80-4bdb-b2de-a4ef71437168": {
+    "id": "84fee9e6-5e80-4bdb-b2de-a4ef71437168",
+    "name": "General Practice",
+    "description": "Primary healthcare and family medicine",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432058",
+    "updated_at": "2025-08-05T10:06:23.432058",
+    "created_by": null,
+    "updated_by": null
+  },
+  "c145bcab-7b48-4c03-b111-1909ea9d7929": {
+    "id": "c145bcab-7b48-4c03-b111-1909ea9d7929",
+    "name": "Internal Medicine",
+    "description": "Adult internal medicine and general medical care",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432541",
+    "updated_at": "2025-08-05T10:06:23.432541",
+    "created_by": null,
+    "updated_by": null
+  },
+  "fda4def8-1749-4413-ad6e-ffa80eb501f5": {
+    "id": "fda4def8-1749-4413-ad6e-ffa80eb501f5",
+    "name": "Emergency Medicine",
+    "description": "Emergency and urgent medical care",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432551",
+    "updated_at": "2025-08-05T10:06:23.432551",
+    "created_by": null,
+    "updated_by": null
+  },
+  "2bcd8169-b4ce-406a-b210-5e4fa3b8db9b": {
+    "id": "2bcd8169-b4ce-406a-b210-5e4fa3b8db9b",
+    "name": "Anesthesiology",
+    "description": "Anesthesia and perioperative care",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432557",
+    "updated_at": "2025-08-05T10:06:23.432557",
+    "created_by": null,
+    "updated_by": null
+  },
+  "705050c7-0540-42ec-8493-862b671207bf": {
+    "id": "705050c7-0540-42ec-8493-862b671207bf",
+    "name": "Radiology",
+    "description": "Medical imaging and diagnostic radiology",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432563",
+    "updated_at": "2025-08-05T10:06:23.432563",
+    "created_by": null,
+    "updated_by": null
+  },
+  "592163be-bdf2-4983-a849-d3692c083749": {
+    "id": "592163be-bdf2-4983-a849-d3692c083749",
+    "name": "Pathology",
+    "description": "Laboratory medicine and disease diagnosis",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432568",
+    "updated_at": "2025-08-05T10:06:23.432568",
+    "created_by": null,
+    "updated_by": null
+  },
+  "61b86793-1cf8-4aa9-9e00-382bd7b2fe36": {
+    "id": "61b86793-1cf8-4aa9-9e00-382bd7b2fe36",
+    "name": "Psychiatry",
+    "description": "Mental health and psychiatric disorders",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432574",
+    "updated_at": "2025-08-05T10:06:23.432574",
+    "created_by": null,
+    "updated_by": null
+  },
+  "981459b4-965a-4318-baa5-4c33be4a361b": {
+    "id": "981459b4-965a-4318-baa5-4c33be4a361b",
+    "name": "Obstetrics and Gynecology",
+    "description": "Women's reproductive health and childbirth",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432579",
+    "updated_at": "2025-08-05T10:06:23.432579",
+    "created_by": null,
+    "updated_by": null
+  },
+  "abd99ec9-a729-4e0d-81c0-2264f65fb7f2": {
+    "id": "abd99ec9-a729-4e0d-81c0-2264f65fb7f2",
+    "name": "Ophthalmology",
+    "description": "Eye and vision care",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432584",
+    "updated_at": "2025-08-05T10:06:23.432584",
+    "created_by": null,
+    "updated_by": null
+  },
+  "04def28b-9bef-4655-93d2-32a85fc89bd5": {
+    "id": "04def28b-9bef-4655-93d2-32a85fc89bd5",
+    "name": "Otolaryngology",
+    "description": "Ear, nose, and throat disorders",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432589",
+    "updated_at": "2025-08-05T10:06:23.432589",
+    "created_by": null,
+    "updated_by": null
+  },
+  "9d1c2b49-e4a1-450c-a3c3-ace921c0f4bb": {
+    "id": "9d1c2b49-e4a1-450c-a3c3-ace921c0f4bb",
+    "name": "Urology",
+    "description": "Urinary system and male reproductive health",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432594",
+    "updated_at": "2025-08-05T10:06:23.432594",
+    "created_by": null,
+    "updated_by": null
+  },
+  "b85c34b9-de1e-48da-99a4-5cc11fcdd7bd": {
+    "id": "b85c34b9-de1e-48da-99a4-5cc11fcdd7bd",
+    "name": "Gastroenterology",
+    "description": "Digestive system disorders",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432599",
+    "updated_at": "2025-08-05T10:06:23.432599",
+    "created_by": null,
+    "updated_by": null
+  },
+  "58d17d8a-897e-4a30-924f-daa5d3a106f1": {
+    "id": "58d17d8a-897e-4a30-924f-daa5d3a106f1",
+    "name": "Pulmonology",
+    "description": "Respiratory system and lung diseases",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432604",
+    "updated_at": "2025-08-05T10:06:23.432604",
+    "created_by": null,
+    "updated_by": null
+  },
+  "7d492163-f3ca-4a89-922d-26a6711daa71": {
+    "id": "7d492163-f3ca-4a89-922d-26a6711daa71",
+    "name": "Endocrinology",
+    "description": "Hormonal and metabolic disorders",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432608",
+    "updated_at": "2025-08-05T10:06:23.432608",
+    "created_by": null,
+    "updated_by": null
+  },
+  "5125ce8d-ae23-4d25-909d-379c6efd03cf": {
+    "id": "5125ce8d-ae23-4d25-909d-379c6efd03cf",
+    "name": "Rheumatology",
+    "description": "Autoimmune and joint diseases",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432613",
+    "updated_at": "2025-08-05T10:06:23.432613",
+    "created_by": null,
+    "updated_by": null
+  },
+  "900ed9b0-c0d7-4cd5-b1ca-55b9ceac6efa": {
+    "id": "900ed9b0-c0d7-4cd5-b1ca-55b9ceac6efa",
+    "name": "Hematology",
+    "description": "Blood disorders and diseases",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432617",
+    "updated_at": "2025-08-05T10:06:23.432617",
+    "created_by": null,
+    "updated_by": null
+  },
+  "495ffe0d-6a4f-443a-8364-bdc4393c113b": {
+    "id": "495ffe0d-6a4f-443a-8364-bdc4393c113b",
+    "name": "Oncology",
+    "description": "Cancer diagnosis and treatment",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432622",
+    "updated_at": "2025-08-05T10:06:23.432622",
+    "created_by": null,
+    "updated_by": null
+  },
+  "8e33d3cc-6d09-4461-9c64-4c9d61df5660": {
+    "id": "8e33d3cc-6d09-4461-9c64-4c9d61df5660",
+    "name": "Nephrology",
+    "description": "Kidney diseases and disorders",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432627",
+    "updated_at": "2025-08-05T10:06:23.432627",
+    "created_by": null,
+    "updated_by": null
+  },
+  "3f885d0e-188f-4543-b82f-80b88ac6ac5f": {
+    "id": "3f885d0e-188f-4543-b82f-80b88ac6ac5f",
+    "name": "Infectious Disease",
+    "description": "Infectious diseases and immunology",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432632",
+    "updated_at": "2025-08-05T10:06:23.432632",
+    "created_by": null,
+    "updated_by": null
+  },
+  "859e49de-37f9-4d6e-9e3a-dadec2388975": {
+    "id": "859e49de-37f9-4d6e-9e3a-dadec2388975",
+    "name": "Allergy and Immunology",
+    "description": "Allergic reactions and immune system disorders",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432639",
+    "updated_at": "2025-08-05T10:06:23.432639",
+    "created_by": null,
+    "updated_by": null
+  },
+  "396149ea-7ffc-4d28-b54c-c30644cb91b1": {
+    "id": "396149ea-7ffc-4d28-b54c-c30644cb91b1",
+    "name": "Physical Medicine",
+    "description": "Rehabilitation and physical therapy medicine",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432644",
+    "updated_at": "2025-08-05T10:06:23.432644",
+    "created_by": null,
+    "updated_by": null
+  },
+  "11e26019-aff5-4555-a56a-e87fab5106d0": {
+    "id": "11e26019-aff5-4555-a56a-e87fab5106d0",
+    "name": "Plastic Surgery",
+    "description": "Reconstructive and cosmetic surgery",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432648",
+    "updated_at": "2025-08-05T10:06:23.432648",
+    "created_by": null,
+    "updated_by": null
+  },
+  "209a1f7c-1ce1-47f7-9884-ef0aa99bbada": {
+    "id": "209a1f7c-1ce1-47f7-9884-ef0aa99bbada",
+    "name": "Orthopedic Surgery",
+    "description": "Surgical treatment of musculoskeletal conditions",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432653",
+    "updated_at": "2025-08-05T10:06:23.432653",
+    "created_by": null,
+    "updated_by": null
+  },
+  "280cf312-465c-43d8-a7f2-e9017cc7fd14": {
+    "id": "280cf312-465c-43d8-a7f2-e9017cc7fd14",
+    "name": "Neurosurgery",
+    "description": "Surgical treatment of nervous system disorders",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432657",
+    "updated_at": "2025-08-05T10:06:23.432657",
+    "created_by": null,
+    "updated_by": null
+  },
+  "cfc27d7e-fb62-452a-abc9-03828b8b09ed": {
+    "id": "cfc27d7e-fb62-452a-abc9-03828b8b09ed",
+    "name": "Cardiac Surgery",
+    "description": "Heart and cardiovascular surgery",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432662",
+    "updated_at": "2025-08-05T10:06:23.432662",
+    "created_by": null,
+    "updated_by": null
+  },
+  "11e92c09-beec-4f26-b1d6-3d30441addce": {
+    "id": "11e92c09-beec-4f26-b1d6-3d30441addce",
+    "name": "Thoracic Surgery",
+    "description": "Chest and lung surgery",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432667",
+    "updated_at": "2025-08-05T10:06:23.432667",
+    "created_by": null,
+    "updated_by": null
+  },
+  "4fd5f210-a789-45ce-a656-2fb5aab024d7": {
+    "id": "4fd5f210-a789-45ce-a656-2fb5aab024d7",
+    "name": "Vascular Surgery",
+    "description": "Blood vessel and circulation surgery",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432671",
+    "updated_at": "2025-08-05T10:06:23.432671",
+    "created_by": null,
+    "updated_by": null
+  },
+  "07b7f0ed-9735-4f25-bfa5-ce1fff465d99": {
+    "id": "07b7f0ed-9735-4f25-bfa5-ce1fff465d99",
+    "name": "General Surgery",
+    "description": "General surgical procedures",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432676",
+    "updated_at": "2025-08-05T10:06:23.432676",
+    "created_by": null,
+    "updated_by": null
+  },
+  "f2a2040f-b105-4c49-991d-49999bceae66": {
+    "id": "f2a2040f-b105-4c49-991d-49999bceae66",
+    "name": "Pediatric Surgery",
+    "description": "Surgical care for children",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432680",
+    "updated_at": "2025-08-05T10:06:23.432680",
+    "created_by": null,
+    "updated_by": null
+  },
+  "6a57bf3e-6383-4a0e-987c-1b3baf78f5b0": {
+    "id": "6a57bf3e-6383-4a0e-987c-1b3baf78f5b0",
+    "name": "Trauma Surgery",
+    "description": "Emergency surgical care for injuries",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432685",
+    "updated_at": "2025-08-05T10:06:23.432685",
+    "created_by": null,
+    "updated_by": null
+  },
+  "33ab2636-9b0c-41b1-9ac9-3f9a6e5b6532": {
+    "id": "33ab2636-9b0c-41b1-9ac9-3f9a6e5b6532",
+    "name": "Sports Medicine",
+    "description": "Athletic injuries and performance medicine",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432689",
+    "updated_at": "2025-08-05T10:06:23.432689",
+    "created_by": null,
+    "updated_by": null
+  },
+  "867578ce-4c97-4c9c-ab86-e0ac8eee386d": {
+    "id": "867578ce-4c97-4c9c-ab86-e0ac8eee386d",
+    "name": "Occupational Medicine",
+    "description": "Workplace health and safety",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432694",
+    "updated_at": "2025-08-05T10:06:23.432694",
+    "created_by": null,
+    "updated_by": null
+  },
+  "ba993e6f-2c84-4f6e-8526-3a4e600a6f70": {
+    "id": "ba993e6f-2c84-4f6e-8526-3a4e600a6f70",
+    "name": "Preventive Medicine",
+    "description": "Disease prevention and public health",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432699",
+    "updated_at": "2025-08-05T10:06:23.432699",
+    "created_by": null,
+    "updated_by": null
+  },
+  "128c79d2-ce16-467d-a608-bf5e0969219c": {
+    "id": "128c79d2-ce16-467d-a608-bf5e0969219c",
+    "name": "Geriatrics",
+    "description": "Healthcare for elderly patients",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432704",
+    "updated_at": "2025-08-05T10:06:23.432704",
+    "created_by": null,
+    "updated_by": null
+  },
+  "99cbfa2f-8756-454c-b0f5-8acba6824be0": {
+    "id": "99cbfa2f-8756-454c-b0f5-8acba6824be0",
+    "name": "Palliative Care",
+    "description": "Comfort care and end-of-life medicine",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432708",
+    "updated_at": "2025-08-05T10:06:23.432708",
+    "created_by": null,
+    "updated_by": null
+  },
+  "487cc6ad-8fed-495c-8ca6-2e895df6f88b": {
+    "id": "487cc6ad-8fed-495c-8ca6-2e895df6f88b",
+    "name": "Pain Management",
+    "description": "Chronic pain treatment and management",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432712",
+    "updated_at": "2025-08-05T10:06:23.432712",
+    "created_by": null,
+    "updated_by": null
+  },
+  "7ecac8fd-151b-4040-af22-14bc8e01b728": {
+    "id": "7ecac8fd-151b-4040-af22-14bc8e01b728",
+    "name": "Sleep Medicine",
+    "description": "Sleep disorders and sleep health",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432717",
+    "updated_at": "2025-08-05T10:06:23.432717",
+    "created_by": null,
+    "updated_by": null
+  },
+  "a8e1aa1b-ca58-4b8a-a3d9-fae84cf6b075": {
+    "id": "a8e1aa1b-ca58-4b8a-a3d9-fae84cf6b075",
+    "name": "Addiction Medicine",
+    "description": "Substance abuse and addiction treatment",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432722",
+    "updated_at": "2025-08-05T10:06:23.432722",
+    "created_by": null,
+    "updated_by": null
+  },
+  "228a55d4-3789-4298-b5df-c74370a43d39": {
+    "id": "228a55d4-3789-4298-b5df-c74370a43d39",
+    "name": "Nuclear Medicine",
+    "description": "Nuclear imaging and radiopharmaceuticals",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432728",
+    "updated_at": "2025-08-05T10:06:23.432728",
+    "created_by": null,
+    "updated_by": null
+  },
+  "71bdca17-38ff-4d67-9915-158d80fe1a01": {
+    "id": "71bdca17-38ff-4d67-9915-158d80fe1a01",
+    "name": "Interventional Radiology",
+    "description": "Image-guided minimally invasive procedures",
+    "status": "active",
+    "created_at": "2025-08-05T10:06:23.432732",
+    "updated_at": "2025-08-05T10:06:23.432732",
+    "created_by": null,
+    "updated_by": null
+  }
+}

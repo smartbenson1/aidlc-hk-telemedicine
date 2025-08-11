@@ -49,3 +49,5 @@ pip-delete-this-directory.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# Kiro settings with sensitive data
+.kiro/settings/
